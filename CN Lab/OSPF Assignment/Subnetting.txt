@@ -1,0 +1,69 @@
+11.61.0.0/16
+
+16 bits -> Network
+16 bits -> Hosts
+-------------------
+9 subnets required
+2^4 = 16
+
+4 bits to be taken from host part
+
+11.61.0.0/20
+
+Boston
+
+2000 hosts required
+minimum ips 4
+hosts per subnet 2^12 - 2 = 4094
+required hosts satisfied
+difference = 256/16 = 16
+we don't want to waste much ips so, taking more bits from host part.. 
+11.61.4.0/
+128,64,32,16,8,4 = 6 bits to be borrowed
+
+-> 11.61.4.0/22
+now check whether the hosts satisfy.
+hosts per subnet = 2^10 - 2 =1022 (not satisfying)
+return one bit to host part
+-> 128,64,32,16,8 = 5 bits to be borrowed
+-> 11.61.0.0/21 -- 11.61.7.0/21
+-> 11.61.8.0/21 -- 11.61.15.0/21
+hosts per subnet = 2^11 - 2 = 2046 hosts (satisfying)
+8.8.5.0
+255.255.248.0
+subnet mask = 255.255.248.0
+-------------------------------------
+Karachi
+11.61.8.0/21
+hosts required 600
+min ips 4
+
+next network should be starting with -> 11.61.12.0/
+
+128,64,32,16,8,4 = 6 bits to be borrowed
+11.61.12.0/22
+
+hosts per subnet = 2^10 -2 = 1022 (satisfying)
+Subnet Mask = 255.255.252.0
+subnets:
+11.61.8.0/22
+11.61.12.0/22
+----
+
+London
+
+300 hosts required
+min ips 4
+11.61.12.0/22
+next should be starting with 11.61.16.0/
+128,64,32,16,8,4 = 6 bits to be borrowed
+11.61.12.0/22
+11.61.16.0/22
+....
+
+Same pattern will be followed for the rest of the subnets
+
+
+
+
+

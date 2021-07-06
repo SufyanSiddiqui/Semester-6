@@ -1,0 +1,9 @@
+en 
+conf t
+int Vlan 1 or fa0/0 
+ip address 10.0.0.1 255.0.0.0
+no sh
+line vty 0 15
+password pass
+enable password pass
+exit

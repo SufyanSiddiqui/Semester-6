@@ -1,0 +1,10 @@
+Chapter 4. 
+Hill Climbing, Simulated Annealing, 
+Evolutionary Algorithm, Genetic Algorithm 
+Chapter 5 Adversarial Search : Optimization problems, 
+Games, 
+Min Max, Alpha Beta 
+Chapter 6 CSP, 
+Sudoku, Cryptarithmetic, 
+Graph Coloring, DFS and Backtracking, 
+Degree Heuristics, Forward Checking

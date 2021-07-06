@@ -1,0 +1,12 @@
+en
+conf t
+int fa0/0
+ip address 10.0.0.1 255.0.0.0
+no sh
+exit
+dhcp pool 'name'
+network 10.0.0.0 255.0.0.0
+default-router 10.0.0.1 
+dns server 192.168.0.1
+ip dhcp excluded-address 10.0.0.1 10.0.0.5
+exit

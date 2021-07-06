@@ -1,0 +1,16 @@
+hostname 's1'
+domain name 'cs'
+crypto key generate rsa 
+'1024'
+ssh version '2'
+line vty '0' '15'
+transport input ssh
+
+PC:
+ssh -l admin ip address
+
+Custom username:
+
+username 'cs' secret 'abc'
+PC:
+ssh -l username ip address
